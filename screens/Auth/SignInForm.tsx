@@ -42,7 +42,7 @@ const SignInForm = () => {
         </View>
 
         <AppButton     
-          text='Login'         
+          text='Login'            
           containerStyle={styles.loginButton}
         />
 
