@@ -25,7 +25,7 @@ const OtpScreen = () => {
       />
        <AuthFooter text={"Didn’t receive the OTP?"} subText={"Resend OTP"}  />       
     </View>
-  )
+  )    
 }
 
 export default OtpScreen
