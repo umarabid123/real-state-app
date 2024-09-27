@@ -23,7 +23,7 @@ const OtpScreen = () => {
         cellStyle={{borderWidth:1, borderColor:"#C9C9C9", borderRadius:10}}
         cellStyleFocused={{borderColor:Colors.primary, placeholderColor:'#949494'}}   
       />
-       <AuthFooter text={"Didn’t receive the OTP?"} subText={"Resend OTP"}  />    
+       <AuthFooter text={"Didn’t receive the OTP?"} subText={"Resend OTP"}  />       
     </View>
   )
 }
