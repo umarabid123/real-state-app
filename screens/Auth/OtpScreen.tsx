@@ -32,4 +32,4 @@ export default OtpScreen
              
 const styles = StyleSheet.create({ topText: {
   marginTop: 50,   
-},})
+},})    
