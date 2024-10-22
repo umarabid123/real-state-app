@@ -27,7 +27,7 @@ const OtpScreen = () => {
     </View>
   )    
 }
-          
+               
 export default OtpScreen                
              
 const styles = StyleSheet.create({ topText: {
