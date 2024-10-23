@@ -31,5 +31,5 @@ const OtpScreen = () => {
 export default OtpScreen                
              
 const styles = StyleSheet.create({ topText: {
-  marginTop: 50,
+  marginTop: 50,   
 },})
