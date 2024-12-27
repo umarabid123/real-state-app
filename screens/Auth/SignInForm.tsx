@@ -28,7 +28,7 @@ const SignInForm = () => {
           source={require('../../assets/images/password.png')}
           placeholder='Password'
           secureTextEntry={!showPassword}
-        />
+        />    
 
         <View style={styles.rowBetween}>
           <AppText text="Forgot password?" onPress={() => navigation.navigate('OtpScreen')} color={Colors.secondary} fontSize={12} fontWeight={600} />
