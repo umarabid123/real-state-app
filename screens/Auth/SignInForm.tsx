@@ -35,7 +35,7 @@ const SignInForm = () => {
           <AppText
             onPress={() => setShowPassword(!showPassword)}
             text={showPassword ? 'Hide Password' : 'Show Password'}
-            color={Colors.secondary}
+            color={Colors.secondary}    
             fontSize={12}
             fontWeight={600}
           />
