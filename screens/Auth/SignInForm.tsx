@@ -38,7 +38,7 @@ const SignInForm = () => {
             color={Colors.secondary}    
             fontSize={12}
             fontWeight={600}    
-          />
+          />   
         </View>
 
         <AppButton
