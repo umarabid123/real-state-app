@@ -37,7 +37,7 @@ const SignInForm = () => {
             text={showPassword ? 'Hide Password' : 'Show Password'}
             color={Colors.secondary}    
             fontSize={12}
-            fontWeight={600}
+            fontWeight={600}    
           />
         </View>
 
