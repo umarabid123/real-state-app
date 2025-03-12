@@ -10,10 +10,11 @@ import AppButton from '../../components/AppButton/AppButton'
 import DividerOr from '../../components/DividerOr/DividerOr'
 import SocialLogin from '../../components/SocialLogin/SocialLogin'
 import AuthFooter from '../../components/AuthFooter/AuthFooter'
+import { useNavigation } from '@react-navigation/native'
 
 const SignInForm = () => {
   const [showPassword, setShowPassword] = useState(false)
-
+   const navigation = useNavigation<any>()
   return (
     <View style={[globalStyle.container, styles.mainContainer]}>
       <Header />
@@ -30,7 +31,7 @@ const SignInForm = () => {
         />
 
         <View style={styles.rowBetween}>
-          <AppText text="Forgot password?" color={Colors.secondary} fontSize={12} fontWeight={600} />
+          <AppText text="Forgot password?" onPress={() => navigation.navigate('OtpScreen')} color={Colors.secondary} fontSize={12} fontWeight={600} />
           <AppText
             onPress={() => setShowPassword(!showPassword)}
             text={showPassword ? 'Hide Password' : 'Show Password'}
@@ -47,7 +48,7 @@ const SignInForm = () => {
 
         <DividerOr />
         <SocialLogin />
-        <AuthFooter />
+        <AuthFooter route2='SignUp' text={"Don’t have an account?"} subText={'Register'} />
       </View>
     </View>
   )

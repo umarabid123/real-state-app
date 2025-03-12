@@ -1,15 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
-import { globalStyle } from '../../styles/globalStyle'
-import TopText from '../../components/TopText/TopText'
+import { StyleSheet, View } from 'react-native'
+import AppButton from '../../components/AppButton/AppButton'
+import AppText from '../../components/AppText/AppText'
 import Header from '../../components/Header/Header'
 import CustomTextInput from '../../components/TextInput/TextInput'
-import AppText from '../../components/AppText/AppText'
+import TopText from '../../components/TopText/TopText'
 import { Colors } from '../../contexts/theme'
-import AppButton from '../../components/AppButton/AppButton'
-import DividerOr from '../../components/DividerOr/DividerOr'
-import SocialLogin from '../../components/SocialLogin/SocialLogin'
-import AuthFooter from '../../components/AuthFooter/AuthFooter'
+import { globalStyle } from '../../styles/globalStyle'
 
 const SignUpScreen = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -17,7 +14,7 @@ const SignUpScreen = () => {
   return (
     <View style={[globalStyle.container, styles.mainContainer]}>
       <Header />
-      <TopText titleText={"Create"} titleSubText={"your account"} styles={styles.topText} />
+      <TopText titleText={"Create"} description={"quis nostrud exercitation ullamco laboris nisi ut"} titleSubText={"your account"} styles={styles.topText} />
       <View style={styles.formContainer}>
       <CustomTextInput
           source={require('../../assets/images/Profile.png')}
