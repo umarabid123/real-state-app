@@ -16,9 +16,8 @@ const OtpScreen = () => {
        <TopText titleText={"Enter the"} description={"Enter the 4 digit code that we just sent to"} titleSubText={"code"} subDescription={"\njonathan@email.com"} subTextStyle={{color:Colors.mediumGray, fontWeight:600}} styles={styles.topText} type={"subText"} />
 
        <SmoothPinCodeInput
-        // ref={this.pinInput}
         value={otp}
-        onTextChange={setOtp}
+        onTextChange={setOtp}  
         onBackspace={() => console.log('No more back.')}
         animated={false}
         cellStyle={{borderWidth:1, borderColor:"#C9C9C9", borderRadius:10}}
