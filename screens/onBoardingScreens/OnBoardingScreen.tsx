@@ -22,7 +22,7 @@ const OnBoardingScreen = () => {
           <AppText text={"v.1.0"} style={{ textAlign: "center" }} fontSize={10} fontWeight={700} color={Colors.lightGray} />
         </View>
       </View>
-    </ImageBackground>        
+    </ImageBackground>            
   )
 }
 
