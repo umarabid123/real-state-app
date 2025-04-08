@@ -2,12 +2,12 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import AppText from './components/AppText/AppText'
 import { globalStyle } from './styles/globalStyle'
+import { Colors } from './contexts/theme'
+import OnBoardingScreen from './screens/onBoardingScreens/OnBoardingScreen'
 
 const App = () => {
   return (
-    <View style={globalStyle.container}>
-      <AppText text='Hello World!' fontSize={20} color='blue' fontWeight='bold' />
-    </View>
+    <OnBoardingScreen />
   )
 }
 
