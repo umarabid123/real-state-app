@@ -1,11 +1,16 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from "@react-navigation/stack";
+import React from 'react';
+import OnBoardingScreen from '../screens/onBoardingScreens/OnBoardingScreen';
 
 const Navigation = () => {
+  const Stack = createStackNavigator();
   return (
-    <View>
-      <Text>Navigation</Text>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName='OnBoarding'>
+        <Stack.Screen name='OnBoarding' component={OnBoardingScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   )
 }
 
