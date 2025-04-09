@@ -1,10 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { FlatList, Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 const SignInScreen = () => {
+  const images = [require("../../assets/images/login-img.png"), require("../../assets/images/login-img.png"), require("../../assets/images/login-img-2.png"), require("../../assets/images/login-img.png")]
   return (
     <View>
-      <Text>SignInScreen</Text>
+      <View style={{flexDirection:'row', flexWrap:'wrap',gap:8}}>
+      {images.map((item, i) => {
+        return (
+          <Image source={item} key={i} />
+        )
+      })}
+      </View>
     </View>
   )
 }
