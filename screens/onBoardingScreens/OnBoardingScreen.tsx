@@ -26,7 +26,7 @@ const OnBoardingScreen = () => {
         </View>
 
         <View style={styles.footer}>
-          <AppButton text="let's start" />
+          <AppButton text="let's start" route='SignIn' />
           <AppText
             text="Made with love"
             style={styles.footerText}
