@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Image, StyleSheet, SafeAreaView, TouchableOpacity, Text } from 'react-native';
-import AppText from '../../components/AppText/AppText';
+import { Image, SafeAreaView, StyleSheet, View } from 'react-native';
 import AppButton from '../../components/AppButton/AppButton';
+import AppText from '../../components/AppText/AppText';
+import AuthFooter from '../../components/AuthFooter/AuthFooter';
+import DividerOr from '../../components/DividerOr/DividerOr';
 import { Colors } from '../../contexts/theme';
 import { globalStyle } from '../../styles/globalStyle';
-import DividerOr from '../../components/DividerOr/DividerOr';
-import AuthFooter from '../../components/AuthFooter/AuthFooter';
+import SocialLogin from '../../components/SocialLogin/SocialLogin';
 
 const SignInScreen = () => {
   const images = [
@@ -49,10 +50,7 @@ const SignInScreen = () => {
       <DividerOr />
 
       {/* Social Login */}
-      <View style={styles.socialContainer}>
-        <AppButton containerStyle={{ backgroundColor: Colors.softGray, width: 158, borderRadius: 8 }} type='notText' source={(require('../../assets/images/google.png'))} />
-        <AppButton containerStyle={{ backgroundColor: Colors.softGray, width: 158, borderRadius: 8 }} type='notText' source={(require('../../assets/images/facebook.png'))} />
-      </View>
+      <SocialLogin />
       {/* Footer Text */}
       <AuthFooter />
     </SafeAreaView>
@@ -81,12 +79,12 @@ const styles = StyleSheet.create({
     borderRadius: 12,
   },
   centered: {
-    width:'100%',
+    width: '100%',
     alignItems: 'center',
     marginTop: 53,
   },
   titleText: {
-    alignSelf:'flex-start'
+    alignSelf: 'flex-start'
   },
   icon: {
     width: 20,
@@ -102,18 +100,5 @@ const styles = StyleSheet.create({
     marginTop: 50,
     marginBottom: 41
   },
-  socialContainer: {
-    flexDirection: 'row',
-    gap: 10,
-    marginTop: 20
-  },
-  socialButton: {
-    backgroundColor: '#f1f1f1',
-    padding: 12,
-    borderRadius: 12,
-  },
-  socialIcon: {
-    width: 30,
-    height: 30,
-  },
+
 });
