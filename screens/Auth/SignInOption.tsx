@@ -7,6 +7,7 @@ import DividerOr from '../../components/DividerOr/DividerOr';
 import { Colors } from '../../contexts/theme';
 import { globalStyle } from '../../styles/globalStyle';
 import SocialLogin from '../../components/SocialLogin/SocialLogin';
+import Header from '../../components/Header/Header';
 
 const SignInScreen = () => {
   const images = [
