@@ -44,6 +44,7 @@ const SignInScreen = () => {
           type='icon'
           source={require('../../assets/images/mail-icon.png')}
           containerStyle={styles.emailButton}
+          route='SignInForm'
         />
       </View>
 
