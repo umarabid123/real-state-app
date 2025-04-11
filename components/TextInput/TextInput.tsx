@@ -2,20 +2,20 @@ import { Image, StyleSheet, TextInput, View } from 'react-native';
 import React, { useState } from 'react';
 import { Colors } from '../../contexts/theme';
 
-const CustomTextInput = () => {
+const CustomTextInput = ({placeholder,source}:{placeholder?:string; source?:any}) => {
   const [text, setText] = useState('');
 
   return (
     <View
       style={[
         styles.wrapper,
-        { flexDirection: text ? 'row-reverse' : 'row' }
+        { flexDirection: text ? 'row-reverse' : 'row', borderWidth: text ? 1 : undefined, borderColor: text ? Colors.primary : undefined },
       ]}
     >
-      <Image source={require('../../assets/images/primary-mail-icon.png')} />
+      <Image source={source} />
       <TextInput
         style={styles.input}
-        placeholder="Type something..."
+        placeholder={placeholder}
         value={text}
         onChangeText={setText}
       />
