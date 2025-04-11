@@ -2,7 +2,7 @@ import { Image, StyleSheet, TextInput, View } from 'react-native';
 import React, { useState } from 'react';
 import { Colors } from '../../contexts/theme';
 
-const CustomTextInput = ({placeholder,source}:{placeholder?:string; source?:any}) => {
+const CustomTextInput = ({placeholder,source,keyboardType, secureTextEntry}:{placeholder?:string; source?:any; keyboardType?:any; secureTextEntry?:any;}) => {
   const [text, setText] = useState('');
 
   return (
@@ -18,6 +18,8 @@ const CustomTextInput = ({placeholder,source}:{placeholder?:string; source?:any}
         placeholder={placeholder}
         value={text}
         onChangeText={setText}
+        keyboardType={keyboardType}
+        secureTextEntry={secureTextEntry}
       />
     </View>
   );

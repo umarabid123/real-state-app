@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { globalStyle } from '../../styles/globalStyle'
 import TopText from '../../components/TopText/TopText'
 import Header from '../../components/Header/Header'
@@ -12,24 +12,41 @@ import SocialLogin from '../../components/SocialLogin/SocialLogin'
 import AuthFooter from '../../components/AuthFooter/AuthFooter'
 
 const SignInForm = () => {
-  return (
-    <View style={[globalStyle.container, { justifyContent: 'flex-start', paddingTop: 24, alignItems: 'flex-start' }]}>
-      <Header />
-      <TopText styles={{ marginTop: 50 }} />
-      <View style={{ marginTop: 50, gap: 15, alignItems: 'center' }}>
-        <CustomTextInput source={require('../../assets/images/primary-mail-icon.png')} placeholder='Email' />
-        <CustomTextInput source={require('../../assets/images/password.png')} placeholder='Email' />
+  const [showPassword, setShowPassword] = useState(false)
 
-        <View style={{ flexDirection: 'row', justifyContent: 'space-between', width: '100%' }}>
-          <AppText text={"Forgot password?"} color={Colors.secondary} fontSize={12} fontWeight={600} />
-          <AppText text={"Show Password"} color={Colors.secondary} fontSize={12} fontWeight={600} />
+  return (
+    <View style={[globalStyle.container, styles.mainContainer]}>
+      <Header />
+      <TopText styles={styles.topText} />
+      <View style={styles.formContainer}>
+        <CustomTextInput
+          source={require('../../assets/images/primary-mail-icon.png')}
+          placeholder='Email'
+        />
+        <CustomTextInput
+          source={require('../../assets/images/password.png')}
+          placeholder='Password'
+          secureTextEntry={!showPassword}
+        />
+
+        <View style={styles.rowBetween}>
+          <AppText text="Forgot password?" color={Colors.secondary} fontSize={12} fontWeight={600} />
+          <AppText
+            onPress={() => setShowPassword(!showPassword)}
+            text={showPassword ? 'Hide Password' : 'Show Password'}
+            color={Colors.secondary}
+            fontSize={12}
+            fontWeight={600}
+          />
         </View>
-        <AppButton text='Login' containerStyle={{ backgroundColor: Colors.primary, width: 278, marginHorizontal: 'auto', marginTop: 50 }} />
+
+        <AppButton
+          text='Login'
+          containerStyle={styles.loginButton}
+        />
 
         <DividerOr />
-
         <SocialLogin />
-
         <AuthFooter />
       </View>
     </View>
@@ -38,4 +55,30 @@ const SignInForm = () => {
 
 export default SignInForm
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  mainContainer: {
+    justifyContent: 'flex-start',
+    paddingTop: 24,
+    alignItems: 'flex-start',
+  },
+  topText: {
+    marginTop: 50,
+  },
+  formContainer: {
+    marginTop: 50,
+    gap: 15,
+    alignItems: 'center',
+    width: '100%',
+  },
+  rowBetween: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
+  loginButton: {
+    backgroundColor: Colors.primary,
+    width: 278,
+    marginTop: 50,
+    alignSelf: 'center',
+  },
+})
