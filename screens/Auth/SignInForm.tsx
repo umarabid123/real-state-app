@@ -17,7 +17,7 @@ const SignInForm = () => {
   return (
     <View style={[globalStyle.container, styles.mainContainer]}>
       <Header />
-      <TopText styles={styles.topText} />
+      <TopText titleText={"Let’s"} titleSubText={"Sign In"} description={"quis nostrud exercitation ullamco laboris nisi ut"} styles={styles.topText} />
       <View style={styles.formContainer}>
         <CustomTextInput
           source={require('../../assets/images/primary-mail-icon.png')}

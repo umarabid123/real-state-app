@@ -3,11 +3,11 @@ import React from 'react'
 import AppText from '../AppText/AppText'
 import { Colors } from '../../contexts/theme'
 
-const TopText = ({styles}:{styles?:object;}) => {
+const TopText = ({styles,titleText,titleSubText,description}:{styles?:object; titleSubText?:any; titleText?:any; description?:any}) => {
   return (
     <View style={styles}>
-      <AppText text={"Let’s"} style={{marginBottom:20}} type='subText' subText='Sign In' fontSize={25} fontWeight={500} subTextStyle={{fontWeight:800}} color={Colors.secondary}/>
-      <AppText text={"quis nostrud exercitation ullamco laboris nisi ut"}
+      <AppText text={titleText} style={{marginBottom:20}} type='subText' subText={titleSubText} fontSize={25} fontWeight={500} subTextStyle={{fontWeight:800}} color={Colors.secondary}/>
+      <AppText text={description}
       fontSize={12} color={Colors.mediumGray} />
     </View>
   )

@@ -2,11 +2,13 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import AppText from '../AppText/AppText'
 import { Colors } from '../../contexts/theme'
+import { useNavigation } from '@react-navigation/native'
 
-const AuthFooter = () => {
+const AuthFooter = ({route2}:{route2?:string}) => {
+    const navigation = useNavigation<any>()
     return (
         <View style={styles.footer}>
-            <AppText text={"Don’t have an account?"} type='subText' subText='Register' subTextStyle={styles.registerText} style={styles.footerText} />
+            <AppText text={"Don’t have an account?"} type='subText' subText='Register' subTextStyle={styles.registerText} style={styles.footerText} onSubPress={()=> route2 && navigation.navigate(route2)} />
         </View>
     )
 }
