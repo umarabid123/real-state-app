@@ -17,7 +17,7 @@ const OtpScreen = () => {
 
        <SmoothPinCodeInput
         value={otp}
-        onTextChange={setOtp}  
+        onTextChange={setOtp}      
         onBackspace={() => console.log('No more back.')}
         animated={false}
         cellStyle={{borderWidth:1, borderColor:"#C9C9C9", borderRadius:10}}
